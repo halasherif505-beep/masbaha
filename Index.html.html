@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>مسبحة إلكترونية – صدقة جارية</title>
+<meta property="og:title" content="مسبحة إلكترونية – صدقة جارية">
+<meta property="og:description" content="سبّح معنا وادعُ لأرواح الفقيدين: الدكتور سيد أبو الفتوح رمضان وفائزة محمد الطنطاوي رمضان">
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#eef5f1; --card:#ffffff; --ink:#12332a; --muted:#4f6f64; --accent:#0f6b52; --gold:#b8892b; --ring:#d5e5dd; --on-accent:#ffffff;
+  box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){--bg:#0d1f1a; --card:#14302a; --ink:#e8f3ee; --muted:#9bbcb0; --accent:#3fbf97; --gold:#e0b45a; --ring:#244a40; --on-accent:#06251c;}
+}
+:root[data-theme="dark"]{--bg:#0d1f1a; --card:#14302a; --ink:#e8f3ee; --muted:#9bbcb0; --accent:#3fbf97; --gold:#e0b45a; --ring:#244a40; --on-accent:#06251c;}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Cairo',system-ui,sans-serif;line-height:1.7}
+main{max-width:480px;margin:0 auto;padding:20px 16px 28px}
+.dua{background:var(--card);border-radius:20px;padding:22px 18px;text-align:center;border:1px solid var(--ring);border-top:4px solid var(--gold)}
+.dua h1{font-family:'Amiri',serif;font-size:1.35rem;margin:0 0 6px;color:var(--gold);font-weight:700}
+.names{font-family:'Amiri',serif;font-size:1.45rem;font-weight:700;line-height:1.9;margin:4px 0 12px}
+.names span{display:block}
+.dua p{font-family:'Amiri',serif;font-size:1.2rem;margin:0 0 10px;color:var(--ink);line-height:2}
+.dua .amin{color:var(--muted);font-size:1rem;margin:0}
+.chips{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:24px 0 8px}
+.chip{border:1.5px solid var(--accent);background:transparent;color:var(--accent);font:600 .95rem 'Cairo',sans-serif;padding:6px 14px;border-radius:999px;cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--accent);color:var(--on-accent)}
+.chip:focus-visible,.tap:focus-visible,.btn:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.dhikr{font-family:'Amiri',serif;text-align:center;font-size:2rem;font-weight:700;margin:12px 0 0}
+.stage{position:relative;width:min(78vw,300px);aspect-ratio:1;margin:12px auto}
+.stage svg{position:absolute;inset:0;width:100%;height:100%;transform:rotate(90deg) scaleX(-1)}
+.track{fill:none;stroke:var(--ring);stroke-width:10}
+.bar{fill:none;stroke:var(--gold);stroke-width:10;stroke-linecap:round;transition:stroke-dashoffset .15s}
+.tap{position:absolute;inset:18px;border-radius:50%;border:0;background:var(--accent);color:var(--on-accent);cursor:pointer;display:flex;flex-direction:column;align-items:center;justify-content:center;touch-action:manipulation;user-select:none;-webkit-user-select:none;box-shadow:0 8px 24px rgba(0,0,0,.18);transition:transform .08s}
+.tap:active{transform:scale(.95)}
+.num{font:700 4.2rem/1 'Cairo',sans-serif;font-variant-numeric:tabular-nums}
+.sub{font-size:.95rem;opacity:.85;margin-top:6px}
+.cheer{min-height:3.6em;text-align:center;font-family:'Amiri',serif;font-size:1.2rem;color:var(--ink);margin:6px 8px 4px;line-height:1.9}
+.stats{display:flex;justify-content:center;gap:24px;color:var(--muted);font-size:.95rem}
+.stats b{color:var(--ink);font-variant-numeric:tabular-nums}
+.actions{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:22px}
+.btn{border:0;border-radius:14px;padding:13px 10px;font:700 1rem 'Cairo',sans-serif;cursor:pointer;background:var(--card);color:var(--ink);border:1px solid var(--ring)}
+.btn.fb{grid-column:1/-1;background:#1877f2;color:#fff;border-color:#1877f2;font-size:1.1rem}
+.toast{text-align:center;color:var(--accent);min-height:1.6em;margin-top:10px;font-size:.95rem}
+footer{text-align:center;margin-top:26px;padding-top:16px;border-top:1px solid var(--ring);color:var(--muted);font-size:.95rem}
+footer strong{display:block;color:var(--ink);font-size:1.05rem;direction:ltr;margin-top:2px}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<main>
+  <section class="dua" aria-label="دعاء للمتوفين">
+    <h1>صدقة جارية عن روح</h1>
+    <div class="names">
+      <span>الدكتور سيد أبو الفتوح رمضان</span>
+      <span>فائزة محمد الطنطاوي رمضان</span>
+    </div>
+    <p>اللهم اغفر لهما وارحمهما، وعافهما واعف عنهما، وأكرم نزلهما ووسّع مدخلهما، واغسلهما بالماء والثلج والبرد، ونقّهما من الخطايا كما يُنقّى الثوب الأبيض من الدنس.</p>
+    <p>اللهم أبدلهما دارًا خيرًا من دارهما، وأهلًا خيرًا من أهلهما، وأدخلهما الجنة، وأعذهما من عذاب القبر وعذاب النار.</p>
+    <p class="amin">اقرأ الدعاء، ثم سبّح، وثواب تسبيحك صدقة لهما. جزاك الله خيرًا.</p>
+  </section>
+
+  <div class="chips" id="chips" role="group" aria-label="اختر الذكر"></div>
+  <div class="dhikr" id="dhikr" aria-live="polite"></div>
+
+  <div class="stage">
+    <svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="45"/><circle class="bar" id="bar" cx="50" cy="50" r="45"/></svg>
+    <button class="tap" id="tap" aria-label="اضغط للتسبيح"><span class="num" id="num">0</span><span class="sub">اضغط للتسبيح</span></button>
+  </div>
+
+  <div class="cheer" id="cheer" aria-live="polite">ابدأ بسم الله، وكل تسبيحة لها أجر.</div>
+  <div class="stats"><span>الدورات: <b id="rounds">0</b></span><span>الإجمالي: <b id="total">0</b></span></div>
+
+  <div class="actions">
+    <button class="btn fb" id="fb">شارك على فيسبوك</button>
+    <button class="btn" id="copy">انسخ الرابط</button>
+    <button class="btn" id="reset">ابدأ من جديد</button>
+  </div>
+  <div class="toast" id="toast" role="status"></div>
+
+  <footer>صُنعت هذه المسبحة صدقةً جارية
+    <strong>Hala sherif</strong>
+  </footer>
+</main>
+
+<script>
+(function(){
+  var DHIKR=["سبحان الله","الحمد لله","الله أكبر","لا إله إلا الله","أستغفر الله","اللهم صلِّ على محمد"];
+  var LIMIT=33, C=2*Math.PI*45;
+  var state={d:0,counts:[0,0,0,0,0,0]};
+  var $=function(i){return document.getElementById(i)};
+  var bar=$("bar"); bar.style.strokeDasharray=C;
+
+  var CHEERS=[
+    "كلمتان خفيفتان على اللسان، ثقيلتان في الميزان، حبيبتان إلى الرحمن: سبحان الله وبحمده، سبحان الله العظيم.",
+    "أحسنت! استمر، فكل تسبيحة صدقة.",
+    "من قال سبحان الله وبحمده مئة مرة حُطّت خطاياه وإن كانت مثل زبد البحر.",
+    "لسانك رطب بذكر الله، ما أجمله!",
+    "ثواب ما تسبّحه يصل إلى من تدعو لهما بإذن الله.",
+    "الباقيات الصالحات خير عند ربك ثوابًا وخير أملًا.",
+    "ما شاء الله، لا تتوقف، أنت على خير."
+  ];
+  var cheerIdx=0;
+
+  function save(){try{localStorage.setItem("masbaha1",JSON.stringify(state))}catch(e){}}
+  function load(){try{var s=localStorage.getItem("masbaha1");if(s){var o=JSON.parse(s);if(o&&o.counts&&o.counts.length===6){state=o}}}catch(e){}}
+  function nf(n){try{return n.toLocaleString("ar-EG")}catch(e){return String(n)}}
+  function total(){return state.counts.reduce(function(a,b){return a+b},0)}
+
+  function render(){
+    var c=state.counts[state.d];
+    var inRound=c%LIMIT;
+    $("num").textContent=nf(inRound===0&&c>0?LIMIT:inRound);
+    $("rounds").textContent=nf(Math.floor(c/LIMIT));
+    $("total").textContent=nf(total());
+    $("dhikr").textContent=DHIKR[state.d];
+    var shown=(inRound===0&&c>0)?LIMIT:inRound;
+    bar.style.strokeDashoffset=C*(1-shown/LIMIT);
+    var chips=document.querySelectorAll(".chip");
+    for(var i=0;i<chips.length;i++){chips[i].setAttribute("aria-pressed",i===state.d?"true":"false")}
+  }
+
+  function buildChips(){
+    var box=$("chips");
+    DHIKR.forEach(function(t,i){
+      var b=document.createElement("button");
+      b.className="chip";b.type="button";b.textContent=t;
+      b.addEventListener("click",function(){state.d=i;save();render();$("cheer").textContent="ابدأ بسم الله، وكل تسبيحة لها أجر."});
+      box.appendChild(b);
+    });
+  }
+
+  function cheer(c){
+    var el=$("cheer");
+    if(c%LIMIT===0){el.textContent="الله يتقبل منك! أتممت "+nf(LIMIT)+" تسبيحة. كمّل دورة جديدة وأجرك مضاعف إن شاء الله."}
+    else if(c===100||c===500||c===1000){el.textContent="ما شاء الله! وصلت إلى "+nf(c)+" تسبيحة، جعلها الله في ميزان حسناتك."}
+    else if(c%10===0){el.textContent=CHEERS[cheerIdx%CHEERS.length];cheerIdx++}
+  }
+
+  $("tap").addEventListener("click",function(){
+    state.counts[state.d]++;
+    var c=state.counts[state.d];
+    try{if(navigator.vibrate)navigator.vibrate(c%LIMIT===0?[40,30,40]:12)}catch(e){}
+    cheer(c);save();render();
+  });
+
+  $("reset").addEventListener("click",function(){
+    state.counts[state.d]=0;save();render();
+    $("cheer").textContent="ابدأ بسم الله، وكل تسبيحة لها أجر.";
+  });
+
+  function pageUrl(){
+    var u="";
+    try{u=window.top.location.href}catch(e){}
+    if(!u||u==="about:srcdoc"){try{u=document.referrer}catch(e){}}
+    if(!u||u.indexOf("http")!==0){u=location.href}
+    return u.split("#")[0];
+  }
+  function toast(m){$("toast").textContent=m;setTimeout(function(){$("toast").textContent=""},3500)}
+
+  function shareText(){
+    var t=total();
+    return "سبّح معنا صدقةً جارية عن روح الدكتور سيد أبو الفتوح رمضان وفائزة محمد الطنطاوي رمضان، رحمهما الله."+(t>0?" سبّحت "+nf(t)+" تسبيحة.":"");
+  }
+
+  function copyText(txt,ok){
+    function fallback(){
+      var a=document.createElement("textarea");a.value=txt;a.style.position="fixed";a.style.opacity="0";document.body.appendChild(a);a.select();
+      try{document.execCommand("copy");toast(ok)}catch(e){toast("انسخ الرابط من شريط العنوان")}
+      document.body.removeChild(a);
+    }
+    if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(txt).then(function(){toast(ok)},fallback)}else{fallback()}
+  }
+
+  $("fb").addEventListener("click",function(){
+    var url=pageUrl();
+    var fbUrl="https://www.facebook.com/sharer/sharer.php?u="+encodeURIComponent(url)+"&quote="+encodeURIComponent(shareText());
+    var w=null;
+    try{w=window.open(fbUrl,"_blank","noopener")}catch(e){}
+    if(!w&&navigator.share){
+      navigator.share({title:document.title,text:shareText(),url:url}).catch(function(){});
+    }else if(!w){
+      copyText(url,"تم نسخ الرابط، الصقه في منشور فيسبوك");
+    }
+  });
+
+  $("copy").addEventListener("click",function(){copyText(pageUrl(),"تم نسخ الرابط، الصقه في أي مكان")});
+
+  load();buildChips();render();
+})();
+</script>
+</body>
+</html>
